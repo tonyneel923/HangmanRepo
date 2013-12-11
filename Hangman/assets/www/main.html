@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+  <meta charset = "UTF-8" />
+  
+  
+	
+  <head>
+    <title>Hangman</title>
+    <script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/hangman.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.3.2.min.js"></script>
+    <script type="text/javascript">
+    
+     function onLoad(){
+          document.addEventListener("deviceready", onDeviceReady, false);
+     }
+     function onDeviceReady(){
+          
+         
+     }
+     
+  </script>
+  </head>
+  
+  <body onload="onLoad();">
+  	    <div data-role="page" id="pageone" style="background: #000000 
+    url('img/background2.jpg') repeat;">
+  <div data-role="header">
+    <h1>Welcome To the Chalkboard!</h1>
+  </div>
+
+  <div data-role="content" style="position: absolute; top: 50%; margin-top: -1.2em; width:100%; margin-left: -1em;">
+    <a href="#pagetwo" data-role="button" data-theme="a">Play</a><br>
+  </div>
+
+  <!--footer
+  <div data-role="footer" data-position="fixed">
+    <p>hangman</p>
+  </div>-->
+</div> 
+
+<!--page two-->
+<div data-role="page" id="pagetwo">
+  <div data-role="header">
+    <h1>Guess a Letter or the Word</h1>
+  </div>
+
+  <div data-role="content">
+    <img alt= "start image" src="img/turn 0.jpg" id="my_image"/>
+    <br>
+    <label for="basic">Enter complete guess.</label>
+    <input type="text" name="name" id="input" value=""  />
+    
+    <form>
+    <Select data-inline="true" id="dropDown">
+        <option value="a">a</option>
+        <option value="b">b</option>
+        <option value="c">c</option>
+        <option value="d">d</option>
+        <option value="e">e</option>
+        <option value="f">f</option>
+        <option value="g">g</option>
+        <option value="h">h</option>
+        <option value="i">i</option>
+        <option value="j">j</option>
+        <option value="k">k</option>
+        <option value="l">l</option>
+        <option value="m">m</option>
+        <option value="n">n</option>
+        <option value="o">o</option>
+        <option value="p">p</option>
+        <option value="q">q</option>
+        <option value="r">r</option>
+        <option value="s">s</option>
+        <option value="t">t</option>
+        <option value="u">u</option>
+        <option value="v">v</option>
+        <option value="w">w</option>
+        <option value="x">x</option>
+        <option value="y">y</option>
+        <option value="z">z</option>
+    </Select>
+    </form>
+    <h2>Click</h2>
+    <h3 id="display"></h3>
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+    <button id="newGame" onclick="redo()">New word</button>
+  </div>
+</div> 
+       
+  </body>
+</html>
